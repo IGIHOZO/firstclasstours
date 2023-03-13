@@ -72,6 +72,11 @@ $headers .= 'From: '.$fromName.'<'.$from.'>' . "\r\n";
 // Send email 
 if(mail($to, $subject, $htmlContent, $headers)){ 
     echo 'Email has sent successfully.'; 
+    ?>
+    <script>
+        alert('Message sent Successfully !');
+    </script>
+    <?php
 }else{ 
    echo 'Email sending failed.'; 
 }
